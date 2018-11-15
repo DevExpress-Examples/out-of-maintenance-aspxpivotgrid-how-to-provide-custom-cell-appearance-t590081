@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Default.aspx](./CS/CellAppearanceCustomization/Default.aspx) (VB: [Default.aspx.vb](./VB/CellAppearanceCustomization/Default.aspx.vb))
+* **[Default.aspx.cs](./CS/CellAppearanceCustomization/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/CellAppearanceCustomization/Default.aspx.vb))**
+<!-- default file list end -->
 # ASPxPivotGrid - How to provide custom cell appearance
 
 
