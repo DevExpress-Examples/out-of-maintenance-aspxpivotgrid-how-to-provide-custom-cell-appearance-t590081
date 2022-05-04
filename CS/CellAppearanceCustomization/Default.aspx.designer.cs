@@ -8,10 +8,10 @@
 //------------------------------------------------------------------------------
 
 namespace CellAppearanceCustomization {
-    
-    
+
+
     public partial class DefaultForm {
-        
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,7 +20,7 @@ namespace CellAppearanceCustomization {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// cbApplyCustomCellAppearance control.
         /// </summary>
@@ -29,7 +29,7 @@ namespace CellAppearanceCustomization {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxCheckBox cbApplyCustomCellAppearance;
-        
+
         /// <summary>
         /// cbTopAlignRowFieldValues control.
         /// </summary>
@@ -38,7 +38,7 @@ namespace CellAppearanceCustomization {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxCheckBox cbTopAlignRowFieldValues;
-        
+
         /// <summary>
         /// pivotGrid control.
         /// </summary>
@@ -47,7 +47,7 @@ namespace CellAppearanceCustomization {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid pivotGrid;
-        
+
         /// <summary>
         /// fieldCompanyName control.
         /// </summary>
@@ -56,16 +56,16 @@ namespace CellAppearanceCustomization {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldCompanyName;
-        
+
         /// <summary>
-        /// fieldOrderDate control.
+        /// fieldOrderDate1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldOrderDate;
-        
+        protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldOrderDate1;
+
         /// <summary>
         /// fieldProductAmount control.
         /// </summary>
@@ -74,7 +74,7 @@ namespace CellAppearanceCustomization {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldProductAmount;
-        
+
         /// <summary>
         /// fieldProductName control.
         /// </summary>
@@ -83,14 +83,14 @@ namespace CellAppearanceCustomization {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldProductName;
-        
+
         /// <summary>
-        /// CustomerReportDataSource control.
+        /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.AccessDataSource CustomerReportDataSource;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }

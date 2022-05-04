@@ -1,8 +1,8 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="true" CodeBehind="Default.aspx.vb" Inherits="CellAppearanceCustomization.DefaultForm" %>
 
-<%@ Register Assembly="DevExpress.Web.ASPxPivotGrid.v17.2, Version=17.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+<%@ Register Assembly="DevExpress.Web.ASPxPivotGrid.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web.ASPxPivotGrid" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v17.2, Version=17.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+<%@ Register Assembly="DevExpress.Web.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web" TagPrefix="dx" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -25,25 +25,44 @@
             </tr>
         </table>
         <dx:ASPxPivotGrid ID="pivotGrid" runat="server" CssClass="dxpgControl" ClientInstanceName="pivotGrid"
-            DataSourceID="CustomerReportDataSource" OnCustomCellStyle="ASPxPivotGrid1_CustomCellStyle"
-            Width="100%" Height="116px">
+            DataSourceID="SqlDataSource1" OnCustomCellStyle="ASPxPivotGrid1_CustomCellStyle"
+            Width="100%" Height="116px" ClientIDMode="AutoID" IsMaterialDesign="False" OptionsData-DataProcessingEngine="Optimized">
             <Fields>
-                <dx:PivotGridField Area="RowArea" AreaIndex="0" Caption="Customer" FieldName="CompanyName"
-                    ID="fieldCompanyName" UnboundFieldName="" />
-                <dx:PivotGridField Area="ColumnArea" AreaIndex="0" Caption="Year" FieldName="OrderDate"
-                    ID="fieldOrderDate" GroupInterval="DateYear" UnboundFieldName="UnboundColumn1" />
-                <dx:PivotGridField Area="DataArea" AreaIndex="0" Caption="Product Amount" FieldName="ProductAmount"
-                    ID="fieldProductAmount" UnboundFieldName="" />
-                <dx:PivotGridField Area="RowArea" AreaIndex="1" Caption="Products" FieldName="ProductName"
-                    ID="fieldProductName" UnboundFieldName="" />
+                <dx:PivotGridField Area="RowArea" AreaIndex="0" Caption="Customer"
+                    ID="fieldCompanyName" UnboundFieldName="" >
+                    <DataBindingSerializable>
+                        <dx:DataSourceColumnBinding ColumnName="CompanyName" />
+                    </DataBindingSerializable>
+                </dx:PivotGridField>
+                <dx:PivotGridField Area="ColumnArea" AreaIndex="0" Caption="Year"
+                    ID="fieldOrderDate1" Name="fieldOrderDate1" >
+                    <DataBindingSerializable>
+                        <dx:DataSourceColumnBinding ColumnName="OrderDate" GroupInterval="DateYear" />
+                    </DataBindingSerializable>
+                </dx:PivotGridField>
+                <dx:PivotGridField Area="DataArea" AreaIndex="0" Caption="Product Amount"
+                    ID="fieldProductAmount" UnboundFieldName="" >
+                    <DataBindingSerializable>
+                        <dx:DataSourceColumnBinding ColumnName="ProductAmount" />
+                    </DataBindingSerializable>
+                </dx:PivotGridField>
+                <dx:PivotGridField Area="RowArea" AreaIndex="1" Caption="Products"
+                    ID="fieldProductName" UnboundFieldName="" >
+                    <DataBindingSerializable>
+                        <dx:DataSourceColumnBinding ColumnName="ProductName" />
+                    </DataBindingSerializable>
+                </dx:PivotGridField>
             </Fields>
             <OptionsView HorizontalScrollBarMode="Auto" />
             <OptionsLoadingPanel Text="Loading&amp;hellip;" />
-            <OptionsData DataProcessingEngine="LegacyOptimized" />
+            <OptionsData DataProcessingEngine="Optimized" />
             <OptionsFilter NativeCheckBoxes="False" />
         </dx:ASPxPivotGrid>
-        <asp:AccessDataSource ID="CustomerReportDataSource" runat="server" DataFile="~/App_Data/nwind.mdb"
-            SelectCommand="SELECT * FROM [CustomerReports]"></asp:AccessDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                    SelectCommand="SELECT * FROM [CustomerReports]">
+                </asp:SqlDataSource>
     </div>
     </form>
 </body>
