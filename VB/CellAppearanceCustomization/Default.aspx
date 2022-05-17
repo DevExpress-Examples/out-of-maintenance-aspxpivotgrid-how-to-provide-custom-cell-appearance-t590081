@@ -58,12 +58,12 @@
             <OptionsData DataProcessingEngine="Optimized" />
             <OptionsFilter NativeCheckBoxes="False" />
         </dx:ASPxPivotGrid>
+    </div>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
                     ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
                     ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
                     SelectCommand="SELECT * FROM [CustomerReports]">
                 </asp:SqlDataSource>
-    </div>
     </form>
 </body>
 </html>
