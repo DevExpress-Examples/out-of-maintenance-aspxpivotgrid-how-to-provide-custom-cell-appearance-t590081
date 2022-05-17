@@ -99,10 +99,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\NWind.mdf" />
-    <Content Include="App_Data\NWind_log.ldf">
-      <DependentUpon>NWind.mdf</DependentUpon>
-    </Content>
+    <Content Include="App_Data\nwind.mdb" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
